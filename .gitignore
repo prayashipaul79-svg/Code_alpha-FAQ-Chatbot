@@ -1,22 +1,12 @@
-# Python cache
-__pycache__/
-*.py[cod]
-
 # Virtual environment
 venv/
 .venv/
 env/
 
-# Environment variables and secrets
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
 .env
-.env.*
-
-# IDE files
-.vscode/
-
-# Testing cache
 .pytest_cache/
-
-# System files
-.DS_Store
-Thumbs.db
