@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College FAQ Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="chat-container">
+    <header class="chat-header">
+      <div class="header-text">
+        <h1>College FAQ Assistant</h1>
+        <p>Ask me about admissions, fees, exams and more</p>
+      </div>
+      <div class="header-actions">
+        <button id="speak-toggle" class="clear-btn" type="button" title="Turn spoken replies on or off">🔊 Voice reply: On</button>
+        <button id="clear-btn" class="clear-btn" type="button">Clear chat</button>
+      </div>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <div id="loading" class="loading hidden" aria-label="Assistant is typing">
+      <span></span><span></span><span></span>
+    </div>
+
+    <form id="chat-form" class="input-area" autocomplete="off">
+      <button id="mic-btn" class="mic-btn" type="button" title="Click and speak your question">🎤</button>
+      <input id="user-input" type="text" placeholder="Type or click 🎤 and speak..." maxlength="300" />
+      <button id="send-btn" type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
